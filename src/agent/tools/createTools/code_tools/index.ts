@@ -13,4 +13,17 @@ import {exec} from "./execution/exec.js";
 import { gitDiff} from "./git/gitDiff.js";
 import { gitStatus} from "./git/gitStatus.js";
 
-export {read, write, listDirectory, deleteFile, exists, search, tree, findFiles, mkdir, exec, gitDiff, gitStatus};
+export {
+    read, 
+    write, 
+    listDirectory, 
+    deleteFile, 
+    exists, 
+    search, 
+    tree, 
+    findFiles, 
+    mkdir, 
+    exec, 
+    gitDiff, 
+    gitStatus
+};
