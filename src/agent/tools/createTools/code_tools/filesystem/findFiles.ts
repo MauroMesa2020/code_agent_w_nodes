@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { resolveSafePath } from "./utils.js";
 
-interface FindFilesArgs {
+export interface FindFilesArgs {
     pattern: string;
     path?: string;
 }

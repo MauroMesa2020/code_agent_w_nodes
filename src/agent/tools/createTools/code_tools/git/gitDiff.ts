@@ -3,7 +3,7 @@ import { promisify } from "util";
 
 const execAsync = promisify(nodeExec);
 
-interface GitDiffArgs {
+export interface GitDiffArgs {
     staged?: boolean;
 }
 

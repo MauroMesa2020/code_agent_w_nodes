@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import { resolveSafePath } from "./utils";
 
-interface ExistsArgs {
+export interface ExistsArgs {
     path: string;
 }
 

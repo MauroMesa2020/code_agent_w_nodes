@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import {resolveSafePath} from "./utils";
 
-interface ReadArgs {
+export interface ReadArgs {
     path: string;
     startLine?: number;
     endLine?: number;

@@ -3,12 +3,12 @@ import { promisify } from "util";
 
 const execAsync = promisify(nodeExec);
 
-interface ExecArgs {
+export interface ExecArgs {
     command: string;
     timeout?: number;
 }
 
-interface ExecResult {
+export interface ExecResult {
     stdout: string;
     stderr: string;
     exitCode: number;

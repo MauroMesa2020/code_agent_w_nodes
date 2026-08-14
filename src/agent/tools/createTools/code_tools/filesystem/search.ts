@@ -6,13 +6,13 @@ import fs from "fs/promises";
 import path from "path";
 import { resolveSafePath } from "./utils.js";
 
-interface SearchArgs {
+export interface SearchArgs {
     query: string;
     path?: string;
     context?: number;
 }
 
-interface SearchResult {
+export interface SearchResult {
     file: string;
     line: number;
     content: string;

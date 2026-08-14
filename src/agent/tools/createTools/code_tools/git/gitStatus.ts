@@ -3,9 +3,9 @@ import { promisify } from "util";
 
 const execAsync = promisify(nodeExec);
 
-interface GitStatusArgs {}
+export interface GitStatusArgs {}
 
-interface GitStatusResult {
+export interface GitStatusResult {
     output: string;
     isRepository: boolean;
 }

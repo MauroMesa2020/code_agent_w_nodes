@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import { resolveSafePath } from "./utils";
 
-interface DeleteArgs {
+export interface DeleteArgs {
     path: string;
 }
 

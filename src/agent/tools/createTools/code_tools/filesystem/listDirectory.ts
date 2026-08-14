@@ -1,11 +1,11 @@
 import fs from "fs/promises";
 import { resolveSafePath } from "./utils.js";
 
-interface ListDirectoryArgs {
+export interface ListDirectoryArgs {
     path?: string;
 }
 
-interface DirectoryEntry {
+export interface DirectoryEntry {
     name: string;
     type: "file" | "directory";
 }

@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { resolveSafePath } from "./utils.js";
 
-interface TreeArgs {
+export interface TreeArgs {
     path?: string;
     depth?: number;
 }

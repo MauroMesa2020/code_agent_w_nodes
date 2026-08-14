@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import {resolveSafePath} from "./utils";
 
-interface WriteArgs {
+export interface WriteArgs {
     path: string;
     content: string;
 }
