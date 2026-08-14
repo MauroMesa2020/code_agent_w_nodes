@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { resolveSafePath } from "./utils";
+import { resolveSafePath } from "./utils.js";
 
 export interface MkdirArgs {
     path: string;

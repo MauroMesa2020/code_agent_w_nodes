@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import {resolveSafePath} from "./utils";
+import {resolveSafePath} from "./utils.js";
 
 export interface WriteArgs {
     path: string;
