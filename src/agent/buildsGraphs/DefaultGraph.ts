@@ -6,11 +6,12 @@ import type { ITool } from "../tools/ITool.js";
 import { Graph } from "../Graph.js";
 import type { State } from "../../shared/types/State.js";
 import { ErrorNode } from "../nodes/ErrorNode.js";
+import { ProvidersPools } from "../../pools/ProvidersPools.js";
 
 
 export function DefaultGraph(
 
-    client: IProvider,
+    client: IProvider | ProvidersPools,
 
     tool: Map<string, ITool>,
     
@@ -18,6 +19,10 @@ export function DefaultGraph(
 ): Graph<State>{
 
     const graph = new Graph<State>();
+
+    if (client instanceof ProvidersPools) {
+        throw new Error("Todavia no implementado para muchos llms.");
+    }
 
     graph.addNode(
         new ThinkNode(client)

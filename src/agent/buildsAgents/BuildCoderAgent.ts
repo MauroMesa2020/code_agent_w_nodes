@@ -5,6 +5,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { readFile } from "fs/promises";
 import { GeminiProvider } from "../../llm/GeminiProvider.js";
+import {GroqProvider} from "../../llm/GroqProvider.js";
+import { ProvidersPools } from "../../pools/ProvidersPools.js";
+
 // recrear __dirname en ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,6 +26,19 @@ export const systemPrompt =
     );
 
 const client = new GeminiProvider();
+
+/*
+    Aca puedo armar mas de un cliente.
+*/ 
+
+const providersPools = new ProvidersPools(
+
+    [
+        {provider: client, is_available: true, time_available: new Date()},
+        {provider: new GroqProvider(), is_available: true, time_available: new Date()}
+    ]
+);
+
 
 const graph = DefaultGraph(client, tools);
 
