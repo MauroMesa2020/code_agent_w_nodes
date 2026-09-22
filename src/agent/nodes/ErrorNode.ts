@@ -11,8 +11,12 @@ export class ErrorNode implements INode<State> {
 
         state.finished = true;
 
-        state.response =
-            "No pude completar la solicitud debido a un error.";
+        if (state.error?.message){
+            state.response = state.error?.message;
+        }else{
+            state.response = "No pude completar la solicitud debido a un error";
+        }
+
 
         return state;
     }

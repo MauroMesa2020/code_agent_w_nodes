@@ -29,6 +29,8 @@ export class ThinkNode implements INode<State> {
 
             const parsed = JSON.parse(response);
 
+            state.response = parsed.response;
+
             state.lastResponse = parsed.response;
             state.toolCall = parsed.tool_call;
 
