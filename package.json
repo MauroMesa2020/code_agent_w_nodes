@@ -1,0 +1,28 @@
+{
+  "name": "code_agent",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/app.js",
+    "startLaya":" npm run build && node dist/pruebaLaya.js",
+    "mvp": "npm run build && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@receptron/laya": "^0.1.2",
+    "dotenv": "^17.4.2",
+    "tree-sitter": "^0.25.1",
+    "tree-sitter-python": "^0.25.0"
+  }
+}

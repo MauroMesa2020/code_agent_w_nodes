@@ -45,7 +45,9 @@ ${JSON.stringify(sig.parameters, null, 2)}
                 {role: "system", content: prompt},
                 {role: "user", content: input}
             ],
-            finished: false
+            finished: false,
+
+            artifacts: []
         }
 
         return this.graph.run(
